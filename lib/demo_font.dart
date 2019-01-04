@@ -21,7 +21,7 @@ class MyAppPage extends StatefulWidget {
 }
 
 class MyAppPageState extends State<MyAppPage> {
-  String textToShow = "I Like Flutter";
+  String textToShow = "flutter 是很优秀的框架";
 
   @override
   Widget build(BuildContext context) {
@@ -30,25 +30,9 @@ class MyAppPageState extends State<MyAppPage> {
         title: Text("Sample App"),
       ),
       body: Center(
-        child: ListView(
-          children: <Widget>[
-            RaisedButton(
-                onPressed: () {//适合有点击事件的widget
-                  print("click");
-                },
-                child: Text("Button")),
-            GestureDetector(//适合没有点击事件的widget
-              child: FlutterLogo(
-                size: 200.0,
-              ),
-              onTap: () {
-                print("click");
-              },
-
-            ),
-            Text('Row Three'),
-            Text('Row Four'),
-          ],
+        child: Text(
+          textToShow,
+          style: TextStyle(fontFamily: "MyCustomFont",fontSize: 30.0),
         ),
       ),
       floatingActionButton: FloatingActionButton(
